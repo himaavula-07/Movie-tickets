@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+header {
+  background: #e51b23;
+  color: white;
+  text-align: center;
+  padding: 24px 15px;
+}
+
+header h1 {
+  margin: 0 0 6px;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 25px 15px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 12px #0002;
+}
+
+.poster {
+  height: 180px;
+  display: grid;
+  place-items: center;
+  font-size: 70px;
+  background: linear-gradient(135deg, #222, #777);
+  border-radius: 10px;
+  color: white;
+}
+
+button, select {
+  padding: 11px 16px;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+button {
+  background: #e51b23;
+  color: white;
+  font-weight: bold;
+}
+
+select {
+  border: 1px solid #bbb;
+  background: white;
+  margin: 10px 0 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.screen {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  margin: 15px auto 25px;
+  max-width: 500px;
+  border-radius: 50%;
+}
+
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 42px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.seat {
+  background: #ddd;
+  color: #222;
+  padding: 10px 5px;
+}
+
+.seat.selected {
+  background: #2e9d55;
+  color: white;
+}
+
+.seat.booked {
+  background: #555;
+  color: white;
+  cursor: not-allowed;
+}
+
+.summary {
+  margin-top: 25px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.secondary {
+  background: #555;
+  margin-left: 8px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: #0009;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  width: min(420px, 100%);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .seat-grid {
+    grid-template-columns: repeat(4, 42px);
+  }
+}
